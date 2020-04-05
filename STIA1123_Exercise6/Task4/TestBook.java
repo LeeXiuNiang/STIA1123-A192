@@ -19,11 +19,10 @@ public class TestBook {
             price = input.nextDouble();
 
             myLibrary[i] = new Book(title,price);
-            Book b = new Book(title,price);
 
-            if (b.getPrice()>highestPrice){
-                highestPrice = b.getPrice();
-                mostExpensiveBook = b.getTitle();
+            if (myLibrary[i].getPrice()>highestPrice){
+                highestPrice = myLibrary[i].getPrice();
+                mostExpensiveBook = myLibrary[i].getTitle();
             }
         }
         System.out.printf("\"%s%s%.2f\n", mostExpensiveBook , "\" has the highest price with RM " , highestPrice);
